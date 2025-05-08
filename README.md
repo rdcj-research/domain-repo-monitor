@@ -21,7 +21,7 @@ This workflow:
 
 > 🔗 **Live reference implementation:**  
 > See it in use at  
-> [rdcj-research.github.io – monitor-copies.yml](https://github.com/rdcj-research/rdcj-research.github.io/blob/main/.github/workflows/monitor-copies.yml)
+> [rdcj-research.github.io – monitor.yml](https://github.com/rdcj-research/rdcj-research.github.io/blob/main/.github/workflows/monitor.yml)
 
 ---
 
