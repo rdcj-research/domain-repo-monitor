@@ -35,7 +35,40 @@ This workflow:
    ```bash
    select(.owner.login != "${{ github.repository_owner }}")
    ```
-4. Commit and push – the workflow will run daily and open issues for any flagged clones
+4. Commit and push
+
+
+## Setup Instructions (External Cron + GitHub Action)
+**If needed, Uuse an external cron job to trigger this daily.**
+
+### 1. Create a GitHub Personal Access Token
+- Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
+- Create a token with:
+  - `repo`
+  - `workflow`
+- Copy the token (you’ll only see it once)
+
+---
+
+### 2. Set Up a Cron Job (e.g. [cron-job.org](https://cron-job.org))
+- Go to [https://cron-job.org](https://cron-job.org)
+- Sign up and create a new cron job
+
+**Request:**
+- Method: `POST`
+- URL: https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/actions/workflows/monitor.yml/dispatches
+- Headers:
+- `Accept: application/vnd.github+json`
+- `Authorization: Bearer YOUR_PERSONAL_ACCESS_TOKEN`
+- `Content-Type: application/json`
+- Body:
+```json
+{
+  "ref": "main"
+}
+```
+
+Schedule: Daily at your preferred time
 
 ---
 
@@ -44,8 +77,6 @@ This workflow:
 name: Monitor for Suspicious Repo Copies
 
 on:
-  schedule:
-    - cron: '0 12 * * *'  # Runs daily at 12:00 UTC
   workflow_dispatch:
 
 jobs:
