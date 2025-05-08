@@ -39,14 +39,12 @@ This workflow:
 
 
 ## Setup Instructions (External Cron + GitHub Action)
-**If needed, Uuse an external cron job to trigger this daily.**
+**If needed, use an external cron job to trigger the workflow.**
 
 ### 1. Create a GitHub Personal Access Token
 - Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
 - Create a token (workflow → Read and write)
 - Copy the token (you’ll only see it once)
-
----
 
 ### 2. Set Up a Cron Job (e.g. [cron-job.org](https://cron-job.org))
 - Go to [https://cron-job.org](https://cron-job.org)
@@ -65,8 +63,6 @@ This workflow:
   "ref": "main"
 }
 ```
-
-Schedule: Daily at your preferred time
 
 ---
 
