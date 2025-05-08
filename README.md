@@ -75,6 +75,8 @@ Schedule: Daily at your preferred time
 name: Monitor for Suspicious Repo Copies
 
 on:
+   #schedule:
+   # - cron: '0 12 * * *'  # Daily at 12:00 UTC
   workflow_dispatch:
 
 jobs:
