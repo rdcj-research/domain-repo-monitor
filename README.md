@@ -43,9 +43,7 @@ This workflow:
 
 ### 1. Create a GitHub Personal Access Token
 - Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
-- Create a token with:
-  - `repo`
-  - `workflow`
+- Create a token (workflow → Read and write)
 - Copy the token (you’ll only see it once)
 
 ---
