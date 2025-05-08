@@ -136,13 +136,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: "⚠️ Potential copy detected (CNAME / LICENSE / index.md)",
-              body: `The following repositories were found with names similar to your identity or domain, and contain at least one of the following files: \`CNAME\`, \`LICENSE\`, or \`index.md\`.
-
-${matches}
-
-Please review them for potential misuse or unauthorized replication.
-
-_Automated scan triggered by your GitHub Actions monitor._`
+              body: `The following repositories were found with suspicious similarity to your public domains and contain at least one of: \`CNAME\`, \`LICENSE\`, or \`index.md\`.\n\n${matches}\n\nPlease review them for potential misuse or unauthorized replication.\n\n_Automated scan triggered by repository monitoring workflow._`
             });
 ```
 
